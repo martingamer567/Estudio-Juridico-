@@ -1,0 +1,45 @@
+/* ═══════════════════════════════════════════════════════════════
+   mediaqueries/filosofia.css
+   Responsive de la sección de cita / filosofía.
+═══════════════════════════════════════════════════════════════ */
+
+/* ── Tablet (hasta 1024px) ── */
+@media (max-width: 1024px) {
+  .section-filosofia {
+    padding: 80px 32px;
+  }
+
+  /* Las comillas decorativas se achican para no desbordar */
+  .section-filosofia::before {
+    font-size: 280px;
+  }
+}
+
+/* ── Mobile (hasta 768px) ── */
+@media (max-width: 768px) {
+  .section-filosofia {
+    padding: 64px 20px;
+  }
+
+  .section-filosofia::before {
+    font-size: 180px;
+    top: -10px;
+  }
+
+  .quote-text {
+    font-size: 20px;
+    line-height: 1.6;
+  }
+
+  .quote-author {
+    font-size: 11px;
+    letter-spacing: 2px;
+  }
+}
+
+/* ── Mobile pequeño (hasta 380px) ── */
+@media (max-width: 380px) {
+  .quote-text {
+    font-size: 18px;
+  }
+}

@@ -1,0 +1,84 @@
+/* ═══════════════════════════════════════════════════════════════
+   mediaqueries/nav.css
+   Responsive de la barra de navegación.
+   En mobile se ocultan los links y aparece el botón hamburguesa.
+═══════════════════════════════════════════════════════════════ */
+
+/* ── Tablet (hasta 1024px) ── */
+@media (max-width: 1024px) {
+  nav {
+    padding: 20px 32px;
+  }
+
+  .nav-links {
+    gap: 24px;
+  }
+}
+
+/* ── Mobile (hasta 768px) ── */
+@media (max-width: 768px) {
+  nav {
+    padding: 18px 20px;
+  }
+
+  /* Oculta los links de texto */
+  .nav-links {
+    display: none;
+  }
+
+  /* Muestra el botón hamburguesa */
+  .nav-hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 4px;
+  }
+
+  .nav-hamburger span {
+    display: block;
+    width: 24px;
+    height: 1px;
+    background: var(--color-gold);
+    transition: all 0.3s ease;
+  }
+
+  /* Menú mobile desplegable (se activa con JS añadiendo .open al nav) */
+  nav.open .nav-links {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background: rgba(14, 14, 14, 0.97);
+    padding: 32px 24px;
+    gap: 28px;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  nav.open .nav-links a {
+    font-size: 14px;
+    letter-spacing: 3px;
+  }
+
+  /* Animación del ícono hamburguesa al abrir */
+  nav.open .nav-hamburger span:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
+  }
+  nav.open .nav-hamburger span:nth-child(2) {
+    opacity: 0;
+  }
+  nav.open .nav-hamburger span:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg);
+  }
+}
+
+/* ── Mobile pequeño (hasta 380px) ── */
+@media (max-width: 380px) {
+  .nav-logo {
+    font-size: 18px;
+  }
+}

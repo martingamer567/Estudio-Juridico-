@@ -1,0 +1,24 @@
+/* ═══════════════════════════════════════════════════════════════
+   variables.css
+   Centraliza todos los valores reutilizables del sitio.
+   Cambiando estas variables se transforma toda la apariencia.
+═══════════════════════════════════════════════════════════════ */
+
+:root {
+  /* Colores */
+  --color-bg:        #0e0e0e;   /* fondo principal: negro profundo */
+  --color-surface:   #161616;   /* fondo de secciones alternas */
+  --color-border:    #2a2a2a;   /* líneas divisorias sutiles */
+  --color-gold:      #c9a96e;   /* acento dorado: elegancia y autoridad */
+  --color-gold-dark: #a07840;   /* dorado más oscuro (para hover) */
+  --color-text:      #e8e2d6;   /* texto principal: blanco cálido */
+  --color-muted:     #888075;   /* texto secundario: gris arena */
+
+  /* Tipografía */
+  --font-display: 'Cormorant Garamond', serif; /* serif elegante para títulos */
+  --font-body:    'DM Sans', sans-serif;       /* sans-serif limpia para cuerpo */
+
+  /* Layout */
+  --max-w:       1100px;       /* ancho máximo del contenido */
+  --section-pad: 100px 24px;  /* padding estándar vertical/horizontal */
+}

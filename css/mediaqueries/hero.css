@@ -1,0 +1,47 @@
+/* ═══════════════════════════════════════════════════════════════
+   mediaqueries/hero.css
+   Responsive de la sección principal (hero).
+═══════════════════════════════════════════════════════════════ */
+
+/* ── Tablet (hasta 1024px) ── */
+@media (max-width: 1024px) {
+  .hero {
+    padding: 100px 32px 60px;
+  }
+
+  .hero-line {
+    height: 40px;
+  }
+}
+
+/* ── Mobile (hasta 768px) ── */
+@media (max-width: 768px) {
+  .hero {
+    padding: 100px 20px 60px;
+    min-height: 100svh; /* usa svh para evitar el salto de la barra del navegador mobile */
+  }
+
+  .hero-subtitle {
+    font-size: 16px;
+    letter-spacing: 2px;
+    margin-bottom: 36px;
+  }
+
+  .hero-line {
+    height: 32px;
+    margin-bottom: 20px;
+  }
+
+  .btn-primary {
+    padding: 14px 32px;
+    font-size: 10px;
+  }
+}
+
+/* ── Mobile pequeño (hasta 380px) ── */
+@media (max-width: 380px) {
+  .hero-subtitle {
+    font-size: 14px;
+    letter-spacing: 1.5px;
+  }
+}

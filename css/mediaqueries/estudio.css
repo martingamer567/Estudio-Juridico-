@@ -1,0 +1,57 @@
+/* ═══════════════════════════════════════════════════════════════
+   mediaqueries/estudio.css
+   Responsive de la sección "El Estudio".
+   El grid de 2 columnas colapsa a 1 en mobile.
+═══════════════════════════════════════════════════════════════ */
+
+/* ── Tablet (hasta 1024px) ── */
+@media (max-width: 1024px) {
+  .estudio-grid {
+    gap: 48px;
+  }
+
+  .stat-number {
+    font-size: 44px;
+  }
+}
+
+/* ── Mobile (hasta 768px) ── */
+@media (max-width: 768px) {
+  .section-estudio {
+    padding: 64px 20px;
+  }
+
+  /* Una sola columna: texto arriba, stats abajo */
+  .estudio-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  /* Stats en fila horizontal para aprovechar el ancho */
+  .estudio-stats {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+
+  .stat-item {
+    flex: 1 1 calc(50% - 12px); /* dos stats por fila */
+    min-width: 120px;
+  }
+
+  .stat-number {
+    font-size: 40px;
+  }
+}
+
+/* ── Mobile pequeño (hasta 480px) ── */
+@media (max-width: 480px) {
+  /* Stats vuelven a apilarse verticalmente en pantallas muy chicas */
+  .estudio-stats {
+    flex-direction: column;
+  }
+
+  .stat-item {
+    flex: unset;
+  }
+}

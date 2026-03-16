@@ -1,0 +1,48 @@
+/* ═══════════════════════════════════════════════════════════════
+   mediaqueries/contacto.css
+   Responsive del formulario de contacto.
+═══════════════════════════════════════════════════════════════ */
+
+/* ── Tablet (hasta 1024px) ── */
+@media (max-width: 1024px) {
+  .contacto-wrapper {
+    max-width: 100%;
+    padding: 0 16px;
+  }
+}
+
+/* ── Mobile (hasta 768px) ── */
+@media (max-width: 768px) {
+  .section-contacto {
+    padding: 64px 20px;
+  }
+
+  .contacto-wrapper {
+    padding: 0;
+  }
+
+  .form-group label {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+  }
+
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    font-size: 14px;
+    padding: 10px 0;
+  }
+
+  .btn-submit {
+    width: 100%; /* botón full-width en mobile */
+    padding: 16px;
+    margin-top: 24px;
+  }
+}
+
+/* ── Mobile pequeño (hasta 380px) ── */
+@media (max-width: 380px) {
+  .form-group {
+    margin-bottom: 16px;
+  }
+}

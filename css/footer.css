@@ -1,0 +1,54 @@
+/* ═══════════════════════════════════════════════════════════════
+   footer.css
+   Pie de página minimalista con tres columnas:
+   logo · info de contacto · links de navegación
+═══════════════════════════════════════════════════════════════ */
+
+footer {
+  padding: 60px 48px;
+  border-top: 1px solid var(--color-border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* en pantallas chicas los items se apilan */
+  gap: 24px;
+}
+
+/* Logo tipográfico en el footer */
+.footer-logo {
+  font-family: var(--font-display);
+  font-size: 20px;
+  letter-spacing: 3px;
+  color: var(--color-text);
+}
+
+.footer-logo span {
+  color: var(--color-gold);
+}
+
+/* Información legal y de contacto, centrada */
+.footer-info {
+  font-size: 12px;
+  color: var(--color-muted);
+  text-align: center;
+  line-height: 2;
+}
+
+/* Links de navegación en fila */
+.footer-links {
+  display: flex;
+  gap: 28px;
+}
+
+.footer-links a {
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  text-decoration: none;
+  transition: color 0.25s;
+}
+
+.footer-links a:hover {
+  color: var(--color-gold);
+}

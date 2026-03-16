@@ -1,0 +1,74 @@
+/* ═══════════════════════════════════════════════════════════════
+   areas.css
+   Sección de especialidades jurídicas.
+   Tarjetas en grilla de 3 columnas con efecto hover.
+═══════════════════════════════════════════════════════════════ */
+
+.section-areas {
+  padding: var(--section-pad);
+}
+
+/* Grid de 3 tarjetas por fila, separadas por 2px (casi pegadas) */
+.areas-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+}
+
+/* Cada tarjeta de área jurídica */
+.area-card {
+  background: var(--color-surface);
+  padding: 48px 36px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+/* Línea dorada en la parte superior, inicialmente invisible */
+.area-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--color-gold);
+  transform: scaleX(0);      /* sin ancho al inicio */
+  transform-origin: left;    /* se expande desde la izquierda */
+  transition: transform 0.4s ease;
+}
+
+/* Hover: la línea dorada se expande y la tarjeta sube */
+.area-card:hover::before {
+  transform: scaleX(1);
+}
+
+.area-card:hover {
+  transform: translateY(-4px);
+}
+
+/* Número de orden (01, 02...) en color muy sutil */
+.area-number {
+  font-family: var(--font-display);
+  font-size: 48px;
+  font-weight: 300;
+  color: var(--color-border); /* casi invisible, solo decorativo */
+  line-height: 1;
+  margin-bottom: 24px;
+}
+
+/* Nombre del área jurídica */
+.area-title {
+  font-family: var(--font-display);
+  font-size: 26px;
+  font-weight: 400;
+  color: var(--color-text);
+  margin-bottom: 16px;
+}
+
+/* Descripción breve del área */
+.area-text {
+  font-size: 14px;
+  color: var(--color-muted);
+  line-height: 1.8;
+}

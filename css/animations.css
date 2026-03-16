@@ -1,0 +1,24 @@
+/* ═══════════════════════════════════════════════════════════════
+   animations.css
+   Animaciones de aparición al hacer scroll.
+   Los elementos con .reveal-up empiezan ocultos y bajan
+   desde arriba cuando entran en el viewport.
+═══════════════════════════════════════════════════════════════ */
+
+/* Estado inicial: invisible y desplazado hacia abajo */
+.reveal-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+/* Estado final: visible y en su posición normal */
+.reveal-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Retraso escalonado para los hijos: efecto cascada */
+.reveal-up:nth-child(2) { transition-delay: 0.1s; }
+.reveal-up:nth-child(3) { transition-delay: 0.2s; }
+.reveal-up:nth-child(4) { transition-delay: 0.3s; }

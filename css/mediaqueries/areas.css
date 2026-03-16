@@ -1,0 +1,48 @@
+/* ═══════════════════════════════════════════════════════════════
+   mediaqueries/areas.css
+   Responsive de la sección de especialidades.
+   3 columnas → 2 columnas → 1 columna según el ancho.
+═══════════════════════════════════════════════════════════════ */
+
+/* ── Tablet grande (hasta 1024px) ── */
+@media (max-width: 1024px) {
+  .areas-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas en tablet */
+  }
+
+  .area-card {
+    padding: 40px 28px;
+  }
+}
+
+/* ── Mobile (hasta 768px) ── */
+@media (max-width: 768px) {
+  .section-areas {
+    padding: 64px 20px;
+  }
+
+  .areas-grid {
+    grid-template-columns: 1fr; /* 1 columna en mobile */
+    gap: 2px;
+  }
+
+  .area-card {
+    padding: 36px 24px;
+  }
+
+  .area-number {
+    font-size: 36px;
+    margin-bottom: 16px;
+  }
+
+  .area-title {
+    font-size: 22px;
+  }
+}
+
+/* ── Mobile pequeño (hasta 380px) ── */
+@media (max-width: 380px) {
+  .area-card {
+    padding: 28px 20px;
+  }
+}

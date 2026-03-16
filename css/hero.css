@@ -1,0 +1,82 @@
+/* ═══════════════════════════════════════════════════════════════
+   hero.css
+   Sección de bienvenida a pantalla completa.
+   Fondo con rejilla decorativa y halo de luz dorada.
+═══════════════════════════════════════════════════════════════ */
+
+.hero {
+  min-height: 100vh;    /* ocupa toda la altura de la pantalla */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 120px 24px 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Rejilla de líneas sutiles como textura de fondo */
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(201,169,110,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(201,169,110,0.04) 1px, transparent 1px);
+  background-size: 80px 80px;
+  pointer-events: none; /* no interfiere con clicks */
+}
+
+/* Halo radial dorado detrás del texto */
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(201,169,110,0.07) 0%, transparent 65%);
+  pointer-events: none;
+}
+
+/* Contenido encima de los pseudo-elementos */
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+/* Título principal: serif grande con letras espaciadas */
+.hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(52px, 9vw, 110px); /* fluido: se adapta al ancho de pantalla */
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: 8px;
+  color: var(--color-text);
+  margin-bottom: 8px;
+}
+
+/* "V&L" con el ampersand en dorado */
+.hero-title .ampersand {
+  color: var(--color-gold);
+}
+
+/* Subtítulo en cursiva, fino y elegante */
+.hero-subtitle {
+  font-family: var(--font-display);
+  font-size: clamp(16px, 2.5vw, 22px);
+  font-style: italic;
+  font-weight: 300;
+  color: var(--color-muted);
+  letter-spacing: 3px;
+  margin-bottom: 48px;
+}
+
+/* Línea vertical decorativa entre label y título */
+.hero-line {
+  width: 1px;
+  height: 60px;
+  background: linear-gradient(to bottom, transparent, var(--color-gold), transparent);
+  margin: 0 auto 32px;
+}

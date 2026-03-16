@@ -1,0 +1,56 @@
+/* ═══════════════════════════════════════════════════════════════
+   nav.css
+   Barra de navegación fija en la parte superior.
+   Usa efecto "glass morphism": fondo semitransparente + blur.
+═══════════════════════════════════════════════════════════════ */
+
+nav {
+  position: fixed;       /* queda pegada al hacer scroll */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;          /* por encima de todo el contenido */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 48px;
+  background: rgba(14, 14, 14, 0.88); /* fondo oscuro semitransparente */
+  backdrop-filter: blur(12px);         /* desenfoca el contenido detrás */
+  border-bottom: 1px solid var(--color-border);
+}
+
+/* Logo tipográfico del estudio */
+.nav-logo {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+/* El "&" en dorado resalta la unión entre los socios */
+.nav-logo span {
+  color: var(--color-gold);
+}
+
+/* Lista de links en fila horizontal */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+}
+
+/* Estilo base de cada link */
+.nav-links a {
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+.nav-links a:hover {
+  color: var(--color-gold);
+}

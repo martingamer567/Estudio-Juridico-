@@ -1,0 +1,99 @@
+/* ═══════════════════════════════════════════════════════════════
+   base.css
+   Reset del navegador + estilos base del documento.
+   Aplica a todos los elementos por defecto.
+═══════════════════════════════════════════════════════════════ */
+
+/* Elimina márgenes, paddings y unifica el box-model en todos los elementos */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth; /* scroll suave al navegar por anclas (#id) */
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-weight: 300;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased; /* tipografía más nítida en pantallas retina */
+}
+
+/* ── Contenedor centrado con ancho máximo ── */
+.container {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ── Línea decorativa dorada debajo de los títulos de sección ── */
+.divider {
+  width: 48px;
+  height: 1px;
+  background: var(--color-gold);
+  margin: 20px 0 32px;
+}
+
+/* ── Etiqueta pequeña de sección (ej: "EL ESTUDIO") ── */
+.label {
+  font-family: var(--font-body);
+  font-size: 11px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  font-weight: 500;
+}
+
+/* ── Título principal de cada sección ── */
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(36px, 5vw, 58px); /* tamaño fluido según viewport */
+  font-weight: 300;
+  line-height: 1.15;
+  color: var(--color-text);
+}
+
+/* ── Párrafo de cuerpo en tono apagado ── */
+.section-text {
+  color: var(--color-muted);
+  font-size: 15px;
+  line-height: 1.9;
+  margin-bottom: 20px;
+}
+
+/* ── Encabezado centrado reutilizable para secciones ── */
+.section-header {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.section-header .divider {
+  margin: 20px auto 32px; /* centra el divider cuando el header es centrado */
+}
+
+/* ── Botón principal (CTA) ── */
+.btn-primary {
+  display: inline-block;
+  padding: 16px 44px;
+  border: 1px solid var(--color-gold);
+  color: var(--color-gold);
+  font-family: var(--font-body);
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  background: transparent;
+  cursor: pointer;
+}
+
+/* Al hacer hover: fondo dorado con texto oscuro */
+.btn-primary:hover {
+  background: var(--color-gold);
+  color: var(--color-bg);
+}

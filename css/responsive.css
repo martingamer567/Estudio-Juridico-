@@ -1,0 +1,36 @@
+/* ═══════════════════════════════════════════════════════════════
+   responsive.css
+   Adaptaciones para pantallas pequeñas (mobile).
+   A partir de 768px las grillas colapsan a una sola columna.
+═══════════════════════════════════════════════════════════════ */
+
+@media (max-width: 768px) {
+
+  /* Reduce padding del nav y oculta los links (se puede agregar hamburguesa) */
+  nav {
+    padding: 20px 24px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  /* Todas las grillas pasan a una sola columna */
+  .estudio-grid,
+  .areas-grid,
+  .equipo-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  /* Footer apilado verticalmente y centrado */
+  footer {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 24px;
+  }
+
+  .footer-links {
+    justify-content: center;
+  }
+}

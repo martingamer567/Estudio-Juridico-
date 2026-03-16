@@ -1,0 +1,87 @@
+/* ═══════════════════════════════════════════════════════════════
+   contacto.css
+   Sección de formulario de consulta.
+   Estilo editorial: solo borde inferior en los inputs.
+═══════════════════════════════════════════════════════════════ */
+
+.section-contacto {
+  padding: var(--section-pad);
+  background: var(--color-surface);
+}
+
+/* Wrapper del formulario centrado con ancho limitado */
+.contacto-wrapper {
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Cada grupo: label + campo de entrada */
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+/* Etiqueta del campo en mayúsculas pequeñas */
+.form-group label {
+  display: block;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  margin-bottom: 8px;
+}
+
+/* Input, textarea y select: sin fondo, solo borde inferior */
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--color-border);
+  padding: 12px 0;
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 300;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+/* Al hacer foco, el borde inferior cambia a dorado */
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  border-color: var(--color-gold);
+}
+
+.form-group textarea {
+  min-height: 120px;
+  resize: vertical; /* permite redimensionar solo verticalmente */
+}
+
+/* Las opciones del select heredan el fondo oscuro */
+.form-group select option {
+  background: var(--color-surface);
+}
+
+/* Botón de envío del formulario */
+.btn-submit {
+  margin-top: 32px;
+  padding: 16px 56px;
+  background: transparent;
+  border: 1px solid var(--color-gold);
+  color: var(--color-gold);
+  font-family: var(--font-body);
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-submit:hover {
+  background: var(--color-gold);
+  color: var(--color-bg);
+}

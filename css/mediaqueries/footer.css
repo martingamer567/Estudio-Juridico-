@@ -1,0 +1,49 @@
+/* ═══════════════════════════════════════════════════════════════
+   mediaqueries/footer.css
+   Responsive del pie de página.
+   3 columnas → apilado vertical en mobile.
+═══════════════════════════════════════════════════════════════ */
+
+/* ── Tablet (hasta 1024px) ── */
+@media (max-width: 1024px) {
+  footer {
+    padding: 48px 32px;
+    gap: 20px;
+  }
+
+  .footer-links {
+    gap: 20px;
+  }
+}
+
+/* ── Mobile (hasta 768px) ── */
+@media (max-width: 768px) {
+  footer {
+    flex-direction: column;      /* apila los tres bloques verticalmente */
+    align-items: center;
+    text-align: center;
+    padding: 48px 20px;
+    gap: 28px;
+  }
+
+  .footer-links {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px 24px;
+  }
+}
+
+/* ── Mobile pequeño (hasta 380px) ── */
+@media (max-width: 380px) {
+  footer {
+    padding: 40px 16px;
+  }
+
+  .footer-links {
+    gap: 12px 20px;
+  }
+
+  .footer-links a {
+    font-size: 10px;
+  }
+}

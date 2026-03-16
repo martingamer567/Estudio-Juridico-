@@ -1,0 +1,50 @@
+/* ═══════════════════════════════════════════════════════════════
+   mediaqueries/global.css
+   Ajustes responsive para utilidades, tipografía y secciones
+   que no tienen su propio archivo específico.
+═══════════════════════════════════════════════════════════════ */
+
+/* ── Tablet (hasta 1024px) ── */
+@media (max-width: 1024px) {
+  .section-header {
+    margin-bottom: 48px;
+  }
+}
+
+/* ── Mobile (hasta 768px) ── */
+@media (max-width: 768px) {
+
+  /* Reduce el padding estándar de secciones */
+  :root {
+    --section-pad: 64px 20px;
+  }
+
+  /* Encabezado de sección más compacto */
+  .section-header {
+    margin-bottom: 40px;
+  }
+
+  /* El divider centrado también funciona en mobile */
+  .divider {
+    margin: 16px 0 24px;
+  }
+
+  /* Etiqueta ligeramente más pequeña */
+  .label {
+    font-size: 10px;
+    letter-spacing: 3px;
+  }
+
+  /* Texto de cuerpo más compacto */
+  .section-text {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+}
+
+/* ── Mobile pequeño (hasta 380px) ── */
+@media (max-width: 380px) {
+  :root {
+    --section-pad: 52px 16px;
+  }
+}

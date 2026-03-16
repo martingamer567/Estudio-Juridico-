@@ -1,0 +1,52 @@
+/* ═══════════════════════════════════════════════════════════════
+   mediaqueries/equipo.css
+   Responsive de la sección de socios.
+   2 columnas → 1 columna en mobile.
+═══════════════════════════════════════════════════════════════ */
+
+/* ── Tablet (hasta 1024px) ── */
+@media (max-width: 1024px) {
+  .equipo-grid {
+    max-width: 100%;
+    gap: 24px;
+  }
+
+  .equipo-card {
+    padding: 40px 28px;
+  }
+}
+
+/* ── Mobile (hasta 768px) ── */
+@media (max-width: 768px) {
+  .section-equipo {
+    padding: 64px 20px;
+  }
+
+  /* Una tarjeta por fila */
+  .equipo-grid {
+    grid-template-columns: 1fr;
+    max-width: 420px; /* limita el ancho para que no quede muy ancha */
+    margin: 0 auto;
+  }
+
+  .equipo-card {
+    padding: 36px 24px;
+  }
+
+  .equipo-avatar {
+    width: 64px;
+    height: 64px;
+    font-size: 26px;
+  }
+
+  .equipo-name {
+    font-size: 22px;
+  }
+}
+
+/* ── Mobile pequeño (hasta 380px) ── */
+@media (max-width: 380px) {
+  .equipo-card {
+    padding: 28px 16px;
+  }
+}
